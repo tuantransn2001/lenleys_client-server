@@ -1,0 +1,71 @@
+@import "../../../../sass/helpers/variable.scss";
+@import "../../../../sass/helpers/mixin.scss";
+
+.product-detail-wrapper {
+  @include flex-box(column, 2.4rem, none, none);
+  .product-img-wrapper {
+    width: 100%;
+    height: 33rem;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    background-color: $gray-2;
+    .product-img {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      border-radius: 0.8rem;
+    }
+  }
+  .product-info {
+    @include flex-box(column, 0.4rem, none, none);
+    .product-name {
+      @include text-style($fs-9, $bold, none, none, left, capitalize, #404d61);
+    }
+    .product-category {
+      @include text-style(
+        $fs-7,
+        $normal,
+        none,
+        none,
+        left,
+        capitalize,
+        $gray-6
+      );
+    }
+  }
+  .product-rare-and-price {
+    @include flex-box(row, none, center, space-between);
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem solid rgba($color: $border-color, $alpha: 0.2);
+    .product-rare {
+      font-size: 1.6rem;
+      color: $yellow-1;
+    }
+    .product-price {
+      @include text-style($fs-6, $normal, none, none, none, none, $red-2);
+      & > span {
+        font-size: $fs-8;
+        font-weight: $semi-bold;
+        color: #404d61;
+      }
+    }
+  }
+
+  .product-description {
+    @include flex-box(column, 0.8rem, none, none);
+    &-label {
+      @include text-style(
+        $fs-7,
+        $semi-bold,
+        none,
+        none,
+        left,
+        capitalize,
+        #404d61
+      );
+    }
+    &-content {
+      @include text-style($fs-4, $normal, 1.2, none, left, none, $gray-6);
+    }
+  }
+}

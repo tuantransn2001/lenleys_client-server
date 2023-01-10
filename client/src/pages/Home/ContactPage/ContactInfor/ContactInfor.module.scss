@@ -1,0 +1,53 @@
+@import "../../../../sass/helpers/variable.scss";
+@import "../../../../sass/helpers/mixin.scss";
+.contact-shop-information {
+  .contact-shop-information-row {
+    height: 54rem;
+    @include flex-box(column, 11.4rem, none, center);
+    margin-bottom: 1.4rem;
+    .contact-shop-information-row-title {
+      margin-bottom: 2.3rem;
+      @include text-style($fs-9, $semi-bold, 1, 0, left, uppercase, $black-2);
+    }
+    .contact-shop-information-row-desc {
+      .contact-shop-information-row-desc-list {
+        @include flex-box(column, 1.4rem, flex-start, flex-start);
+        .contact-shop-information-row-desc-item {
+          .contact-shop-information-row-desc-item-content {
+            @include text-style(
+              $fs-5,
+              $semi-bold,
+              1,
+              0,
+              left,
+              uppercase,
+              $black-2
+            );
+          }
+        }
+      }
+
+      .contact-shop-information-row-desc-amenities-list {
+        .contact-shop-information-row-desc-amenities-item {
+          @include flex-box(row, 1rem, center, none);
+          padding-bottom: 1.26rem;
+          & img {
+            width: 3rem;
+            height: 3rem;
+          }
+          & span {
+            @include text-style(
+              $fs-2,
+              $normal,
+              1,
+              0,
+              left,
+              none,
+              $primary-color
+            );
+          }
+        }
+      }
+    }
+  }
+}

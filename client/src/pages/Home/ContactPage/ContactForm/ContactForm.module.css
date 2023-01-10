@@ -1,0 +1,26 @@
+.contact-shop-form-wrapper {
+  padding: 4.2rem !important;
+  border: 0.1rem solid #272525;
+}
+
+.contact-shop-form-wrapper .contact-shop-form-title {
+  margin-bottom: 3rem;
+  font-size: 2.016rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: left;
+  text-transform: uppercase;
+  color: #262626;
+}
+
+.contact-shop-form-wrapper .contact-form-submit-btn-content {
+  font-size: 1.26rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+/*# sourceMappingURL=ContactForm.module.css.map */

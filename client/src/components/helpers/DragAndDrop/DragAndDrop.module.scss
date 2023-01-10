@@ -1,0 +1,51 @@
+@import "../../../sass/helpers/variable.scss";
+@import "../../../sass/helpers/mixin.scss";
+
+.dot-style {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background-color: $primary-color;
+}
+
+.drag-and-drop-wrapper {
+  @include flex-box(column, 0.9rem, none, none);
+  .drag-and-drop-label {
+    @include text-style($fs-4, $semi-bold, 1, none, left, uppercase, $black-4);
+  }
+  .bar-wrapper {
+    padding-top: 1.5rem;
+    width: 100%;
+    height: 4rem;
+    @include flex-box(column, 0, none, space-between);
+    .bar {
+      width: 100%;
+      height: 0.5rem;
+      border-radius: 10rem;
+      background-color: $primary-color;
+      position: relative;
+      cursor: pointer;
+      &::before {
+        content: "";
+        @extend .dot-style;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -0.7rem;
+      }
+      .slide-handle {
+        position: absolute;
+        @extend .dot-style;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 100%;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .range-wrapper {
+      align-self: flex-end;
+    }
+  }
+}

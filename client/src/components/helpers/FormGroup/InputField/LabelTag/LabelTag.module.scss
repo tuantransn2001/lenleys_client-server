@@ -1,0 +1,6 @@
+@import "../../../../../sass/helpers/variable.scss";
+@import "../../../../../sass/helpers/mixin.scss";
+.form-label {
+  padding-left: 0.2rem;
+  @include text-style($fs-2, $medium, 1, 0.05rem, left, none, $black-2);
+}

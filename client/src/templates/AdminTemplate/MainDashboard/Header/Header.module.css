@@ -1,0 +1,49 @@
+.admin-maindashboard-header {
+  padding: 0.8rem 2rem;
+  background-color: #1572e8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 0.2rem solid rgba(0, 0, 0, 0.1);
+}
+
+.admin-maindashboard-header .admin-maindashboard-header-right .user-action-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+}
+
+.admin-maindashboard-header .admin-maindashboard-header-right .user-action-wrapper .user-avatar-wrapper {
+  width: 4rem;
+  height: 4rem;
+}
+
+.admin-maindashboard-header .admin-maindashboard-header-right .user-action-wrapper .user-avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=Header.module.css.map */

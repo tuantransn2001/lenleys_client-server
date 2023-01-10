@@ -1,0 +1,72 @@
+@import "../../../sass/helpers/variable.scss";
+@import "../../../sass/helpers/mixin.scss";
+
+.toast-message-wrapper {
+  position: fixed;
+  width: 40rem;
+  height: 9rem;
+  top: 22rem;
+  right: -100%;
+  z-index: $index-max;
+  border-radius: 0.4rem;
+  background-color: $white-color;
+  box-shadow: $box-shadow-1;
+  @include flex-box(column, none, none, none);
+  transition: all ease 1s;
+  &.visible {
+    right: 2rem;
+  }
+  &.close {
+    right: -100%;
+  }
+}
+
+.process-bar-wrapper {
+  width: 100%;
+  height: 0.2rem;
+  position: relative;
+
+  .process-bar {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all linear 0.25s;
+  }
+}
+
+.close-toast-btn-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.2rem;
+}
+
+.icon-type-wrapper {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  & svg {
+    font-size: 1.6rem;
+    color: $white-color;
+  }
+}
+
+.toast-message-content {
+  padding-top: 2.9rem;
+  padding-left: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 2.4rem;
+  & h4 {
+    @include text-style($fs-4, $medium, none, none, left, capitalize, $black-3);
+  }
+  & p {
+    color: $gray-6;
+  }
+}

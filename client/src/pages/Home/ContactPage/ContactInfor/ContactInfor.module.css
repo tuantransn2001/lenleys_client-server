@@ -1,0 +1,90 @@
+.contact-shop-information .contact-shop-information-row {
+  height: 54rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 11.4rem;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1.4rem;
+}
+
+.contact-shop-information .contact-shop-information-row .contact-shop-information-row-title {
+  margin-bottom: 2.3rem;
+  font-size: 2.394rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: left;
+  text-transform: uppercase;
+  color: #262626;
+}
+
+.contact-shop-information .contact-shop-information-row .contact-shop-information-row-desc .contact-shop-information-row-desc-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.4rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.contact-shop-information .contact-shop-information-row .contact-shop-information-row-desc .contact-shop-information-row-desc-list .contact-shop-information-row-desc-item .contact-shop-information-row-desc-item-content {
+  font-size: 1.512rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: left;
+  text-transform: uppercase;
+  color: #262626;
+}
+
+.contact-shop-information .contact-shop-information-row .contact-shop-information-row-desc .contact-shop-information-row-desc-amenities-list .contact-shop-information-row-desc-amenities-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  padding-bottom: 1.26rem;
+}
+
+.contact-shop-information .contact-shop-information-row .contact-shop-information-row-desc .contact-shop-information-row-desc-amenities-list .contact-shop-information-row-desc-amenities-item img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.contact-shop-information .contact-shop-information-row .contact-shop-information-row-desc .contact-shop-information-row-desc-amenities-list .contact-shop-information-row-desc-amenities-item span {
+  font-size: 1.26rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: left;
+  text-transform: none;
+  color: #272525;
+}
+/*# sourceMappingURL=ContactInfor.module.css.map */

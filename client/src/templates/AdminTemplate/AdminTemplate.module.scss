@@ -1,0 +1,5 @@
+@import "../../sass/helpers/mixin.scss";
+.admin-template-wrapper {
+  height: 100vh;
+  @include flex-box(row, 0, flex-start, none);
+}

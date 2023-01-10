@@ -1,0 +1,50 @@
+.available-at-our-store {
+  margin-bottom: 1rem;
+}
+
+.available-at-our-store .available-at-our-canterbury-store-title {
+  padding-top: 7.56rem;
+  margin-bottom: 1.4rem;
+  font-size: 2.394rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #262626;
+}
+
+.available-at-our-store .available-at-our-canterbury-store-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  padding: 4.2rem 0 8.4rem;
+}
+
+.available-at-our-store .available-at-our-canterbury-store-col .available-at-our-canterbury-store-col-img {
+  width: 29rem;
+  height: 2.9rem;
+  margin-bottom: 2rem;
+}
+
+.available-at-our-store .available-at-our-canterbury-store-col .available-at-our-canterbury-store-col-link {
+  font-size: 1.26rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: none;
+  color: #272525;
+}
+/*# sourceMappingURL=ShopAvailable.module.css.map */

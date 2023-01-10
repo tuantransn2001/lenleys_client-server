@@ -1,0 +1,57 @@
+@import "../../../sass/helpers/variable.scss";
+@import "../../../sass/helpers/mixin.scss";
+@import "../../../sass/helpers/extend.scss";
+.product-detail-wrapper {
+  @include flex-box(column, 4rem, none, none);
+  display: flex !important;
+
+  .product-information-extend-wrapper {
+    @include flex-box(column, 4rem, center, none);
+    padding: 4rem;
+    .product-information-tab-list {
+      @include flex-box(row, 4rem, center, none);
+      .product-information-tab-item {
+        &:hover {
+          cursor: pointer;
+        }
+        .product-information-tab-content {
+          @include text-style(
+            $fs-7,
+            $medium,
+            none,
+            0.1rem,
+            none,
+            uppercase,
+            $gray-9
+          );
+        }
+      }
+    }
+    .description-tab-content-wrapper {
+      & p:nth-child(1) {
+        font-style: italic;
+      }
+      & ul {
+        margin-left: 1.4rem;
+        list-style-type: disc;
+      }
+    }
+    .additional-information-wrapper {
+      width: 77rem;
+      border: 0.1rem solid darkgray;
+      padding: 1.2rem 0.8rem;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 0.1rem;
+        height: 100%;
+        background-color: $rgba-black-1;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

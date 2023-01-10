@@ -1,0 +1,27 @@
+@import "../../../../../sass/helpers/variable.scss";
+@import "../../../../../sass/helpers/mixin.scss";
+.create-account-btn-content {
+  @include text-style(
+    $fs-2,
+    $medium,
+    1,
+    0.2rem,
+    center,
+    uppercase,
+    $white-color
+  );
+}
+.already-have-account {
+  display: block;
+  margin-top: 1.4rem;
+  @include flex-box(row, 0.4rem, center, none);
+  @include text-style(
+    $fs-2,
+    $medium,
+    1,
+    0,
+    center,
+    none,
+    rgba($color: $primary-color, $alpha: 0.8)
+  );
+}

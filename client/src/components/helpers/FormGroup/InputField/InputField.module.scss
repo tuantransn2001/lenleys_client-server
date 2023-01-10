@@ -1,0 +1,7 @@
+@import "../../../../sass/helpers/variable.scss";
+@import "../../../../sass/helpers/mixin.scss";
+
+.form-wrapper {
+  width: 100%;
+  @include flex-box(column, 0.8rem, none, none);
+}

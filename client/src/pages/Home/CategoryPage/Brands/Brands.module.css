@@ -1,0 +1,21 @@
+.category-brands-wrapper {
+  padding: 4.2rem 0;
+}
+
+.category-brands-wrapper .category-brands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.8rem;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+}
+/*# sourceMappingURL=Brands.module.css.map */

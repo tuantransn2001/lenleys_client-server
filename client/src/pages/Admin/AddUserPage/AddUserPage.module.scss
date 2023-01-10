@@ -1,0 +1,31 @@
+@import "../../../sass/helpers/variable.scss";
+@import "../../../sass/helpers/mixin.scss";
+
+.add-user-page-wrapper {
+  @include flex-box(column, 4.5rem, none, none);
+  .add-user-page-header {
+    @include flex-box(row, none, center, space-between);
+  }
+}
+
+.metrics-card-list {
+  .metrics-card-item {
+    height: 14.4rem;
+    padding: 2.4rem 1.6rem;
+    background-color: $gray-3;
+    border-radius: 1.4rem;
+    @include flex-box(column, 0.4rem, none, none);
+    .metrics-card-content-wrapper {
+      @include flex-box(row, 1rem, none, none);
+      @include text-style($fs-7, $normal, none, none, none, left, $gray-8);
+      & svg {
+        padding-top: 0.01rem;
+        font-size: 1.6rem;
+        color: $gray-8;
+      }
+    }
+    .metrics-card-number-wrapper {
+      @include text-style($fs-9, $bold, none, none, left, none, $black-8);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../../sass/helpers/variable.scss";
+@import "../../../sass/helpers/mixin.scss";
+.modal-wrapper {
+  position: fixed;
+  inset: 0;
+  background-color: rgba($color: $black-1, $alpha: 0.3);
+  display: none;
+  z-index: $index-max;
+  .overlay {
+    width: 100%;
+    height: 100%;
+    @include flex-box(row, 0, center, center);
+    .modal-body {
+      border-radius: 1rem;
+      background-color: $white-1;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      padding: 2rem 4rem;
+      @include flex-box(row, 0, center, center);
+    }
+  }
+  &.active {
+    display: block;
+  }
+}

@@ -1,0 +1,21 @@
+.infor-contact-wrapper {
+  padding: 5.4rem 0;
+}
+
+.infor-contact-wrapper .infor-contact-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+}
+/*# sourceMappingURL=Contact.module.css.map */

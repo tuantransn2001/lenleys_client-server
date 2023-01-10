@@ -1,0 +1,44 @@
+@import "../../../../../sass/helpers/variable.scss";
+@import "../../../../../sass/helpers/mixin.scss";
+.remember-password-block-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  & input {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  & label {
+    margin-top: 0.06rem;
+    @include text-style($fs-1, $bold, 1, 0, left, none, $black-2);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.login-page-submit-btn-content {
+  padding: 0 3rem;
+  @include text-style(
+    $fs-2,
+    $medium,
+    1,
+    0.2rem,
+    center,
+    uppercase,
+    $white-color
+  );
+}
+.sign-up-btn-content-wrapper {
+  @include flex-box(row, 0.4rem, center, none);
+  margin-top: 2rem;
+  @include text-style($fs-1, $medium, 1, 0, left, none, $primary-color);
+  .sign-up-btn-content {
+    margin-top: -0.092rem;
+    display: block;
+    text-decoration: underline solid $primary-color;
+    @include text-style(1.3rem, $medium, 1, 0, left, none, $primary-color);
+  }
+}

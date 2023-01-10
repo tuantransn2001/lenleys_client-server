@@ -1,0 +1,11 @@
+@import "../../sass/helpers/variable.scss";
+@import "../../sass/helpers/mixin.scss";
+@import "../../sass/helpers/extend.scss";
+
+.loading-page-wrapper {
+  position: fixed;
+  inset: 0 0 0 0;
+  background-color: rgba($color: $white-color, $alpha: 0.6);
+  z-index: $index-max;
+  cursor: wait;
+}

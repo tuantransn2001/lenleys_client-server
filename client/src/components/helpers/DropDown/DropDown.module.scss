@@ -1,0 +1,24 @@
+@import "../../../sass/helpers/variable.scss";
+@import "../../../sass/helpers/mixin.scss";
+.drop-down-wrapper {
+  @include flex-box(column, 0.9rem, flex-start, none);
+  margin-bottom: 2rem;
+  width: 100%;
+  .drop-down-label {
+    @include text-style($fs-4, $semi-bold, 1, none, left, uppercase, $black-4);
+  }
+}
+
+#select {
+  width: 100%;
+  height: 4rem;
+  padding: 0.5rem;
+  text-transform: capitalize;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#option {
+  padding: 2rem;
+}

@@ -1,0 +1,56 @@
+@import "../../../sass/helpers/variable.scss";
+@import "../../../sass/helpers/mixin.scss";
+@import "../../../sass/helpers/extend.scss";
+
+.add-product-page-wrapper {
+  @include flex-box(column, 4rem, none, none);
+  .add-product-page-header {
+    padding-bottom: 2rem;
+    @include flex-box(row, none, center, space-between);
+    border-bottom: 0.1rem solid rgba($color: #333333, $alpha: 0.2);
+  }
+}
+
+.add-product-form-modal-wrapper {
+  @include flex-box(column, 3rem, none, none);
+  & header {
+    border-bottom: 0.1rem solid rgba($color: $black-3, $alpha: 0.6);
+    padding-bottom: 2rem;
+    @include flex-box(row, none, center, space-between);
+    .form-title {
+      @include text-style(
+        $fs-6,
+        $medium,
+        none,
+        none,
+        left,
+        capitalize,
+        $black-2
+      );
+    }
+    .close-modal-btn-icon-wrapper {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      @include flex-box(row, 0, center, center);
+      border: 0.1rem solid $red-1;
+      transition: all ease 0.5s;
+      .close-modal-btn-icon {
+        font-size: 1.2rem;
+        color: $red-1;
+      }
+      &:hover {
+        transform: rotate(90deg);
+        background-color: rgba($color: $red-1, $alpha: 0.6);
+        border-color: rgba($color: $red-1, $alpha: 0.6);
+        .close-modal-btn-icon {
+          font-size: 1.6rem;
+          color: $white-1;
+        }
+      }
+    }
+  }
+  & section {
+    @include flex-box(column, 4rem, none, none);
+  }
+}

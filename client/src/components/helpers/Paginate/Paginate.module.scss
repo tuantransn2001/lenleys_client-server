@@ -1,0 +1,31 @@
+@import "../../../sass/helpers/variable.scss";
+@import "../../../sass/helpers/mixin.scss";
+@import "../../../sass/helpers/extend.scss";
+// ? Paginate style
+.paginate-wrapper {
+  @extend .flex-center;
+  .dot-list {
+    @include flex-box(row, 0.8rem, center, none);
+  }
+}
+.dot-item {
+  display: block;
+  margin: 0 0.6rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  @include flex-box(row, 0, center, center);
+  @include text-style($fs-2, $semi-bold, 1, 0, center, none, $black-2);
+  transition: all ease 0.25s;
+  &.active {
+    background-color: $black-2;
+    color: $white-1;
+    &:hover {
+      background-color: $black-2;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #e6e6e6;
+  }
+}

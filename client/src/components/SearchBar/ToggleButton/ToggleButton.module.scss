@@ -1,0 +1,7 @@
+@import "../../../sass/helpers/mixin.scss";
+
+.toogle-btn-wrapper {
+  width: 1.8rem;
+  height: 1.8rem;
+  @include flex-box(row, 0, center, center);
+}

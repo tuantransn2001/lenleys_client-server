@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,UAAU,CAAC;EACT,OAAO,EAAE,OAAO;EAChB,aAAa,EAAE,GAAG,CAAC,KAAK,CCDV,qBAAO;CDUtB;;AAXD,AAGE,UAHQ,CAGR,iBAAiB,CAAC;EAChB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;CAKb;;AAVH,AAMI,UANM,CAGR,iBAAiB,CAGf,IAAI,CAAC;EACH,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CACb",
+    "sources": [
+        "Payment.module.scss",
+        "../../../sass/helpers/variable.scss"
+    ],
+    "names": [],
+    "file": "Payment.module.css"
+}

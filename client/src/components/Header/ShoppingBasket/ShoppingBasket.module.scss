@@ -1,0 +1,66 @@
+@import "../../../sass/helpers/variable.scss";
+@import "../../../sass/helpers/mixin.scss";
+.cart-slidebar-wrapper {
+  width: 40rem;
+  height: 100vh;
+  padding: 0 2.8rem 2.8rem;
+  background-color: $white-color;
+  position: fixed;
+  top: 0;
+  right: -40rem;
+  z-index: $index-max;
+  transition: all ease 0.4s;
+  &::after {
+    content: "";
+    width: calc(100vw - 40rem);
+    height: 100vh;
+    background-color: rgba($color: $primary-color, $alpha: 0.5);
+    position: fixed;
+    inset: 0;
+    transition: all ease 0.4s;
+    left: -100%;
+  }
+  &.show {
+    right: 0;
+    &::after {
+      left: -1.7rem;
+    }
+  }
+  .cart-slidebar-header {
+    padding-top: 0.35rem;
+    height: 70px;
+    gap: 10px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    @include flex-box(row, none, center, none);
+    .cart-slidebar-title {
+      @include text-style($fs-5, $bold, 1, 0.1rem, left, uppercase, $black-2);
+    }
+    .shop-cart-count {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: $black-1;
+      @include text-style($fs-2, $medium, 1, 0.1rem, left, none, $white-color);
+    }
+  }
+  .cart-slider-body {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .cart-continue-btn-content {
+      margin-top: 1px;
+      @include text-style(
+        $fs-1,
+        $semi-bold,
+        1,
+        0.1rem,
+        center,
+        uppercase,
+        $white-color
+      );
+    }
+  }
+}

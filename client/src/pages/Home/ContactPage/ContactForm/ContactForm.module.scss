@@ -1,0 +1,21 @@
+@import "../../../../sass/helpers/variable.scss";
+@import "../../../../sass/helpers/mixin.scss";
+.contact-shop-form-wrapper {
+  padding: 4.2rem !important;
+  border: 0.1rem solid $primary-color;
+  .contact-shop-form-title {
+    margin-bottom: 3rem;
+    @include text-style($fs-8, $medium, 1, 0, left, uppercase, $black-2);
+  }
+  .contact-form-submit-btn-content {
+    @include text-style(
+      $fs-2,
+      $semi-bold,
+      1,
+      0.2rem,
+      center,
+      uppercase,
+      $white-color
+    );
+  }
+}

@@ -1,0 +1,73 @@
+.wrapper {
+  padding-bottom: 4.2rem;
+}
+
+.wrapper .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.6rem;
+}
+
+.wrapper .information .information-col-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.1rem;
+}
+
+.wrapper .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.6rem;
+}
+
+.wrapper .contact .contact-col-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.1rem;
+}
+
+.wrapper .contact .contact-col-list .contact-col-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.8rem;
+  padding-bottom: 0.4rem;
+}
+
+.wrapper .contact .contact-col-list .contact-col-item:not(:last-child) {
+  border-bottom: 1px dashed #272525;
+}
+
+.wrapper .contact .contact-col-list .contact-col-item .contact-col-item-icon-wrapper {
+  width: 14px;
+  height: 14px;
+}
+
+.wrapper .contact .contact-col-list .contact-col-item .contact-col-item-icon-wrapper svg {
+  font-size: 1.2rem;
+  color: #333;
+}
+/*# sourceMappingURL=Content.module.css.map */

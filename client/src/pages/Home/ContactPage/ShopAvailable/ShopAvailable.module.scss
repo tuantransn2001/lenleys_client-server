@@ -1,0 +1,22 @@
+@import "../../../../sass/helpers/variable.scss";
+@import "../../../../sass/helpers/mixin.scss";
+.available-at-our-store {
+  margin-bottom: 1rem;
+  .available-at-our-canterbury-store-title {
+    padding-top: 7.56rem;
+    margin-bottom: 1.4rem;
+    @include text-style($fs-9, $medium, 1, 0, center, uppercase, $black-2);
+  }
+  .available-at-our-canterbury-store-col {
+    @include flex-box(column, 0, center, none);
+    padding: 4.2rem 0 8.4rem;
+    .available-at-our-canterbury-store-col-img {
+      width: 29rem;
+      height: 2.9rem;
+      margin-bottom: 2rem;
+    }
+    .available-at-our-canterbury-store-col-link {
+      @include text-style($fs-2, $normal, 1, 0, center, none, $primary-color);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../../../sass/helpers/variable.scss";
+@import "../../../../sass/helpers/mixin.scss";
+
+.admin-maindashboard-header {
+  padding: 0.8rem 2rem;
+  background-color: $admin-primary-color;
+  @include flex-box(row, 0, center, space-between);
+  border-bottom: 0.2rem solid rgba($color: $black-color, $alpha: 0.1);
+  .admin-maindashboard-header-left {
+  }
+  .admin-maindashboard-header-right {
+    .user-action-wrapper {
+      @include flex-box(row, 0.2rem, center, none);
+      .user-avatar-wrapper {
+        width: 4rem;
+        height: 4rem;
+        & img {
+          width: 100%;
+          height: 100%;
+          background-size: contain;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

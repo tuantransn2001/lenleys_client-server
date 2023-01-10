@@ -1,0 +1,43 @@
+.sub-nav-bg {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  min-height: 281px;
+  padding: 3.2rem 5.6rem;
+  background-color: $white-1;
+  display: none;
+  z-index: $index-max;
+  border: 1px solid rgba($color: $black-1, $alpha: 0.1);
+  animation: fade-in linear 0.2s;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 1.4rem;
+    background-color: transparent;
+  }
+  .sub-nav-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    .sub-nav-col-title {
+      padding: 0 1.4rem;
+      @extend .primary-title-text-style;
+    }
+    .sub-nav-col-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      padding: 0 1.4rem;
+      .sub-nav-col-item {
+        &-link {
+          @extend .primary-text-style;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

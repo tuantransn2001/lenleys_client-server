@@ -1,0 +1,49 @@
+@import "../../../../../sass/helpers/variable.scss";
+@import "../../../../../sass/helpers/mixin.scss";
+
+.user-information-wrapper {
+  padding: 6rem 12rem;
+}
+
+.profile-info {
+  @include flex-box(column, 1rem, center, center);
+  .user-avatar-wrapper {
+    width: 18rem;
+    height: 18rem;
+    & img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  .user-info {
+    @include flex-box(column, 0.4rem, center, none);
+    .user-name {
+      @include text-style(
+        $fs-10,
+        $semi-bold,
+        none,
+        none,
+        center,
+        capitalize,
+        $black-1
+      );
+    }
+    .order-amount {
+      @include text-style(
+        $fs-5,
+        $normal,
+        none,
+        none,
+        center,
+        capitalize,
+        $gray-2
+      );
+    }
+  }
+  .user-actions {
+    width: 100%;
+    padding: 0 14rem;
+    @include flex-box(column, 0.4rem, none, none);
+  }
+}

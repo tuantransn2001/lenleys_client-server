@@ -1,0 +1,25 @@
+@import "../../../../sass/helpers/variable.scss";
+@import "../../../../sass/helpers/mixin.scss";
+.shop-address-wrapper {
+  // margin-bottom: 7.6rem;
+  @include flex-box(column, 1.8rem, center, center);
+  .shop-address-city {
+    @include text-style($fs-9, $medium, 1, 0, center, uppercase, $black-2);
+  }
+  .shop-address {
+    @include text-style($fs-3, $semi-bold, 1.5, 0, center, uppercase, $black-2);
+  }
+  .shop-contact-wrapper {
+    .shop-contact-title {
+      @include text-style($fs-2, $semi-bold, 1, 0, center, none, $black-2);
+    }
+    .shop-contact-desc {
+      @include text-style($fs-2, $normal, 2.15, 0, center, none, $black-2);
+    }
+  }
+  .find-on-map-btn-link {
+    display: block;
+    text-decoration: underline;
+    @include text-style($fs-2, $bold, 1, 0, center, none, $primary-color);
+  }
+}

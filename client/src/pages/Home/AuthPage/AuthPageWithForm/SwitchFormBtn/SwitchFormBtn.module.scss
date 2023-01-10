@@ -1,0 +1,13 @@
+@import "../../../../../sass/helpers/variable.scss";
+@import "../../../../../sass/helpers/mixin.scss";
+.switch-form-link-direction {
+  @include text-style(
+    $fs-2,
+    $medium,
+    1,
+    0,
+    center,
+    none,
+    rgba($color: $black-color, $alpha: 0.8)
+  );
+}
