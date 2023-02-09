@@ -1,0 +1,103 @@
+@import "../../../sass/helpers/variable.scss";
+@import "../../../sass/helpers/mixin.scss";
+
+.defaultTextStyle {
+  @include text-style(
+    $fs-2,
+    $semi-bold,
+    none,
+    none,
+    left,
+    capitalize,
+    $primary-color
+  );
+}
+
+.view-basket-table-wrapper {
+  .view-basket-table-head-row {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem solid $black-5;
+    @include flex-box(row, 15rem, center, none);
+    & td {
+      @extend .defaultTextStyle;
+    }
+  }
+  .view-basket-table-body-row {
+    @include flex-box(row, none, center, none);
+    margin-bottom: 2rem;
+  }
+
+  .product-information-column {
+    @include flex-box(column, none, none, none);
+    .product-name {
+      @extend .defaultTextStyle;
+      font-size: $fs-1;
+      font-weight: $semi-bold;
+    }
+  }
+  .product-price-subtotal {
+    @extend .defaultTextStyle;
+    font-size: $fs-1;
+    font-weight: $semi-bold;
+  }
+}
+.promo-updateTable-wrapper {
+  border-top: 0.1rem dashed $primary-color;
+  border-bottom: 0.1rem dashed $primary-color;
+  padding: 2rem 0 !important ;
+  .apply-promo-wrapper {
+    @include flex-box(row, 0.4rem, center, none);
+    & input {
+      height: 3.2rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+}
+
+.basket-checkout-wrapper {
+  background-color: $white-1;
+  border: 0.1rem solid $rgba-black-1;
+  padding: 3rem 4rem;
+  @include flex-box(column, none, none, none);
+  margin-left: 3rem;
+}
+.basket-title {
+  margin-bottom: 2rem;
+  @include text-style(
+    $fs-5,
+    $medium,
+    none,
+    none,
+    center,
+    uppercase,
+    $primary-color
+  );
+}
+.basket-content-line-1-wrapper {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid $rgba-black-1;
+  @include flex-box(row, none, center, space-between);
+}
+.basket-cart-strong-text {
+  @extend .defaultTextStyle;
+}
+.basket-cart-default-text {
+  @extend .defaultTextStyle;
+  font-size: $fs-1;
+  color: $rgba-black-1;
+}
+.basket-content-line-2-wrapper {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid $rgba-black-1;
+  @include flex-box(column, 0.6rem, none, none);
+}
+.basket-content-line-3-wrapper {
+  @include flex-box(row, none, center, space-between);
+  margin-bottom: 3rem;
+  & span {
+    font-size: $fs-5;
+  }
+}

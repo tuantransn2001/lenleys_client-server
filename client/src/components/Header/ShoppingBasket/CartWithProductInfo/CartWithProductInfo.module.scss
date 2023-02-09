@@ -45,8 +45,10 @@
   border-bottom: 0.1rem solid $border-color-1;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
+  position: relative;
   .cart-item-img-wrapper {
     display: block;
+    margin-top: -0.6rem;
     width: 5rem;
     height: 5rem;
     & img {
@@ -88,5 +90,9 @@
       margin-top: 0.8rem;
       @include flex-box(row, none, center, space-between);
     }
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }

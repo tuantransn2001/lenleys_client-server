@@ -70,3 +70,10 @@ export const handleWarnFieldNotFill = (targetClass) => {
 export const reloadPage = () => {
   window.location.reload();
 };
+// ?
+export const handleCaculateSubtotal = (targetArr) => {
+  const initialSubtotal = 0;
+  return targetArr.reduce((accumulator, currentItem) => {
+    return accumulator + currentItem.unit_price * currentItem.quantity;
+  }, initialSubtotal);
+};

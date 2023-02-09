@@ -1,0 +1,55 @@
+@import "../../../../sass/helpers/variable.scss";
+@import "../../../../sass/helpers/mixin.scss";
+@import "../../../../sass/helpers/extend.scss";
+
+.table-column-text-bold-style {
+  @include text-style(
+    $fs-1,
+    $semi-bold,
+    none,
+    none,
+    left,
+    none,
+    $primary-color
+  );
+}
+.table-column-text-default-style {
+  @include text-style($fs-1, $normal, none, none, left, none, $black-2);
+}
+.checkout-review-order-box-wrapper {
+  width: 100%;
+  padding: 2rem 2rem;
+  background-color: $white-1;
+  border: 0.2rem dashed $primary-color;
+}
+
+.checkout-review-order-table-wrapper {
+  @include flex-box(column, 1rem, none, none);
+}
+.checkout-review-order-table-head-row {
+  @include flex-box(row, none, center, space-between);
+  padding: 0.6rem 0;
+  border-bottom: 0.1rem solid $primary-color;
+}
+
+.checkout-review-order-body {
+  & tr {
+    @include flex-box(row, none, center, space-between);
+    padding: 1.4rem 0;
+    border-bottom: 0.1rem dashed $primary-color;
+  }
+
+  .table-body-row-cart-list-wrapper {
+    padding: 0;
+    padding: 0.6rem 0;
+    // margin-bottom: 0.8rem;
+    border-bottom: none;
+  }
+}
+
+.checkout-review-order-footer {
+  & tr {
+    padding: 1.4rem 0;
+    @include flex-box(row, none, center, space-between);
+  }
+}
