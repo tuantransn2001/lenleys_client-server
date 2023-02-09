@@ -5,7 +5,7 @@ import style from "./Page.module.scss";
 
 const cx = classNames.bind(style);
 
-const Page = ({ title, children }) => {
+const Page = ({ title, subTile, children }) => {
   const renderPageHeader = () => {
     return (
       title && (

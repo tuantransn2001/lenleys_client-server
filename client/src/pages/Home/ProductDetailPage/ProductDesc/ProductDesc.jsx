@@ -3,6 +3,8 @@ import React, { useState, useRef, useEffect } from "react";
 import AddProductButton from "./AddProductButton/AddProductButton";
 import payment_cards from "~/assets/img/Products/payment_cards.png";
 
+import { useSelector } from "react-redux";
+
 import classNames from "classnames/bind";
 import style from "./ProductDesc.module.scss";
 const cx = classNames.bind(style);
@@ -120,7 +122,11 @@ const ProductMeta = (props) => {
     </>
   );
 };
-const ProductDesc = ({ productDetail }) => {
+const ProductDesc = (props) => {
+  const productDetail = useSelector(
+    (state) => state.CartReducer.currentProductDetail
+  );
+
   return (
     <div className={cx("product-description-wrapper")}>
       <div className="row">
@@ -171,7 +177,7 @@ const ProductDesc = ({ productDetail }) => {
             </span>
             <ProductOptions productDetail={productDetail} />
             <PaymentOptions />
-            <AddProductButton productDetail={productDetail} />
+            <AddProductButton />
             <ProductMeta productDetail={productDetail} />
           </div>
         </div>
