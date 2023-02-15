@@ -8,7 +8,7 @@ const { optionRouter } = require("./option-router");
 const { oderDetailRouter } = require("./oder_detail-router");
 const { shoppingCartRouter } = require("./shopping_cart-router");
 const { authRouter } = require("./auth-router");
-
+const { promoRouter } = require("./promo-router");
 // ? User
 rootRouter.use("/user", userRouter);
 // ? Authenticate && Authorize
@@ -25,4 +25,6 @@ rootRouter.use("/option", optionRouter);
 rootRouter.use("/order-detail", oderDetailRouter);
 // ? Shopping cart
 rootRouter.use("/shopping-cart", shoppingCartRouter);
+// ? Promo
+rootRouter.use("/promo", promoRouter);
 module.exports = { rootRouter };

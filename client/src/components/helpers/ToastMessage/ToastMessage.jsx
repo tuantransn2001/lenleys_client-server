@@ -51,43 +51,43 @@ const CloseToastButton = ({ handleCloseToast }) => {
   );
 };
 
-// const ProcessBar = ({ type, handleCloseToast }) => {
-//   const [processPercent, setProcessPercent] = useState(0);
+const ProcessBar = ({ type, handleCloseToast }) => {
+  const [processPercent, setProcessPercent] = useState(0);
 
-//   const closeToast = handleCloseToast;
-//   if (processPercent >= 100) {
-//     closeToast();
-//   }
+  const closeToast = handleCloseToast;
+  if (processPercent >= 100) {
+    closeToast();
+  }
 
-//   useEffect(() => {
-//     const handleIncreaseBaseOnTime = () => {
-//       const interval = setInterval(() => {
-//         setProcessPercent((prev) => (prev === 100 ? 0 : prev + 2.5));
-//         if (processPercent >= 100) {
-//           clearInterval(interval);
-//         }
-//       }, 200);
-//     };
+  useEffect(() => {
+    const handleIncreaseBaseOnTime = () => {
+      const interval = setInterval(() => {
+        setProcessPercent((prev) => (prev === 100 ? 0 : prev + 2.5));
+        if (processPercent >= 100) {
+          clearInterval(interval);
+        }
+      }, 200);
+    };
 
-//     handleIncreaseBaseOnTime();
+    handleIncreaseBaseOnTime();
 
-//     return () => {
-//       handleIncreaseBaseOnTime();
-//     };
-//   }, []);
+    return () => {
+      handleIncreaseBaseOnTime();
+    };
+  }, []);
 
-//   return (
-//     <div className={cx("process-bar-wrapper")}>
-//       <div
-//         style={{
-//           width: `${processPercent}%`,
-//           backgroundColor: stuff.color[type],
-//         }}
-//         className={cx("process-bar")}
-//       />
-//     </div>
-//   );
-// };
+  return (
+    <div className={cx("process-bar-wrapper")}>
+      <div
+        style={{
+          width: `${processPercent}%`,
+          backgroundColor: stuff.color[type],
+        }}
+        className={cx("process-bar")}
+      />
+    </div>
+  );
+};
 
 const ToastMessage = (props) => {
   const { title, message, type, visible } = props;
@@ -96,6 +96,12 @@ const ToastMessage = (props) => {
   const handleCloseToast = () => {
     setIsClose(true);
   };
+
+  useEffect(() => {
+    return () => {
+      setIsClose(false);
+    };
+  }, []);
 
   return (
     <div
@@ -113,7 +119,7 @@ const ToastMessage = (props) => {
       </div>
 
       <CloseToastButton handleCloseToast={handleCloseToast} />
-      {/* <ProcessBar type={type} handleCloseToast={handleCloseToast} /> */}
+      <ProcessBar type={type} handleCloseToast={handleCloseToast} />
     </div>
   );
 };
