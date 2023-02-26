@@ -44,7 +44,14 @@ const IconType = ({ type }) => {
 const CloseToastButton = ({ handleCloseToast }) => {
   return (
     <div className={cx("close-toast-btn-wrapper")}>
-      <Button size="medium" type="primary" ghost onClick={handleCloseToast}>
+      <Button
+        size="medium"
+        type="primary"
+        ghost
+        onClick={() => {
+          handleCloseToast(false);
+        }}
+      >
         <FontAwesomeIcon color="gray" icon={faXmark} />
       </Button>
     </div>
@@ -54,9 +61,8 @@ const CloseToastButton = ({ handleCloseToast }) => {
 const ProcessBar = ({ type, handleCloseToast }) => {
   const [processPercent, setProcessPercent] = useState(0);
 
-  const closeToast = handleCloseToast;
   if (processPercent >= 100) {
-    closeToast();
+    handleCloseToast();
   }
 
   useEffect(() => {
@@ -66,7 +72,7 @@ const ProcessBar = ({ type, handleCloseToast }) => {
         if (processPercent >= 100) {
           clearInterval(interval);
         }
-      }, 200);
+      }, 1000);
     };
 
     handleIncreaseBaseOnTime();
@@ -90,27 +96,16 @@ const ProcessBar = ({ type, handleCloseToast }) => {
 };
 
 const ToastMessage = (props) => {
-  const { title, message, type, visible } = props;
-  const [isClose, setIsClose] = useState(false);
-
-  const handleCloseToast = () => {
-    setIsClose(true);
-  };
+  const { title, message, type, visible, handleCloseToast } = props;
 
   useEffect(() => {
     return () => {
-      setIsClose(false);
+      handleCloseToast();
     };
-  }, []);
+  });
 
   return (
-    <div
-      className={cx(
-        "toast-message-wrapper",
-        { close: isClose },
-        { visible: visible }
-      )}
-    >
+    <div className={cx("toast-message-wrapper", { visible: visible })}>
       <IconType type={type} />
 
       <div className={cx("toast-message-content")}>

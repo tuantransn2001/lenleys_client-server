@@ -5,7 +5,6 @@ import { reloadPage } from "~/common/common";
 import { fetchApi } from "~/services/utils/fetch";
 import { useSelector, useDispatch } from "react-redux";
 import { DISPLAY_CART_MODAL } from "~/redux/constants/CartConstants/CartConstants";
-import ToastMessage from "~/components/helpers/ToastMessage/ToastMessage";
 const AddProductButton = (props) => {
   const dispatch = useDispatch();
   const addProductButtonRef = useRef(null);
@@ -62,11 +61,6 @@ const AddProductButton = (props) => {
       >
         Add to basket
       </Button>
-      <ToastMessage
-        title="Success"
-        message="Add product to cart success!"
-        type="success"
-      />
     </>
   );
 };

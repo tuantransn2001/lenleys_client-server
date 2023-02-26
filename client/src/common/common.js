@@ -77,3 +77,9 @@ export const handleCalculateSubtotal = (targetArr) => {
     return accumulator + currentItem.unit_price * currentItem.quantity;
   }, initialSubtotal);
 };
+// ?
+export const findIndexByKey = (key, value, arr) => {
+  return arr.findIndex((el) => {
+    return el[key] === value;
+  });
+};

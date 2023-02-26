@@ -50,7 +50,7 @@ const Login = ({ setFormSwitcher }) => {
     validateUserInput &&
       fetchApi.post("auth/login", userInput).then((response) => {
         console.log(response);
-        const { id, email, token, refreshToken } = response.data.data;
+        const { id, email, token } = response.data.data;
         dispatch({
           type: STORE_CURRENT_USER_DETAIL,
           payload: {
@@ -62,7 +62,6 @@ const Login = ({ setFormSwitcher }) => {
           type: STORE_CURRENT_USER_TOKEN,
           payload: {
             token,
-            refreshToken,
           },
         });
 

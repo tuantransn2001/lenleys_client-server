@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
 import EmptyCartContent from "./EmptyCartContent/EmptyCartContent";
 import CartWithProductInfo from "./CartWithProductInfo/CartWithProductInfo";
@@ -14,7 +14,6 @@ import style from "./ShoppingBasket.module.scss";
 import { SET_CART_LIST } from "~/redux/constants/CartConstants/CartConstants";
 
 const cx = classNames.bind(style);
-
 const ShoppingCart = (props) => {
   const dispatch = useDispatch();
   useSetCartList(dispatch);

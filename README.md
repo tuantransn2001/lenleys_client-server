@@ -148,3 +148,7 @@ III) Database: MySQL - Sequelize
   +Task 4: Handle Global state cart list (redux) -> done
 
   +Task 5: Fix all controller in server and redux store
+
+- Ngày 15/2
+  - Task 1: Build Checkout Components
+  - Task 2: Create Modal,Router,Controller Promo

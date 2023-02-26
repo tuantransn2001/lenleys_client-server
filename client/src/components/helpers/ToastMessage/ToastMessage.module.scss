@@ -16,9 +16,6 @@
   &.visible {
     right: 2rem;
   }
-  &.close {
-    right: -100%;
-  }
 }
 
 .process-bar-wrapper {
@@ -67,6 +64,7 @@
     @include text-style($fs-4, $medium, none, none, left, capitalize, $black-3);
   }
   & p {
+    padding-right: 1rem;
     color: $gray-6;
   }
 }

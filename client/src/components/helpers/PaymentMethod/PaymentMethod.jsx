@@ -7,7 +7,7 @@ import style from "./PaymentMethod.module.scss";
 const cx = classNames.bind(style);
 
 const PaymentMethod = (props) => {
-  const { optionColumn, optionList } = props;
+  const { optionColumn, optionList, getUserPayment } = props;
   const paymentOptionRef = useRef([]);
   const [indexActive, setIndexActive] = useState(null);
 
@@ -18,8 +18,8 @@ const PaymentMethod = (props) => {
       paymentOptionEls.map((el, index) => {
         el &&
           el.addEventListener("click", () => {
-            console.log("PAyment onclick");
             setIndexActive(index);
+            getUserPayment(el.type);
           });
       });
   }, []);

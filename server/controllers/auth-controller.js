@@ -53,7 +53,6 @@ class AuthController {
       } else {
         // ? If correct ->  create token -> send to client side
         const jwtSecretKey = process.env.JWT_TOKEN_SECRET_KEY;
-        const jwtRefreshSecretKey = process.env.JWT_REFRESH_TOKEN_SECRET_KEY;
         const tokenData = {
           id: foundUser.id,
           email: foundUser.email,
@@ -61,14 +60,10 @@ class AuthController {
         const token = jwt.sign(tokenData, jwtSecretKey, {
           expiresIn: "7200000",
         });
-        const refreshToken = jwt.sign(tokenData, jwtRefreshSecretKey, {
-          expiresIn: "7200000",
-        });
         const currentUser = {
           id: foundUser.id,
           email: foundUser.email,
           token,
-          refreshToken,
         };
 
         res.status(200).send({

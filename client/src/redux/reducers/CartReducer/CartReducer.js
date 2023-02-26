@@ -4,8 +4,9 @@ import {
   SET_DEFAULT_CART_ITEM,
   UPDATE_ITEM,
   DELETE_ITEM,
+  UPDATE_CART_ITEM_QUANTITY,
 } from "~/redux/constants/CartConstants/CartConstants";
-
+import { findIndexByKey } from "~/common/common";
 const initialState = {
   cartList: [],
   currentProductDetail: {},
@@ -44,6 +45,20 @@ const CartReducer = (state = initialState, action) => {
 
       state.cartList.splice(foundProductIndex, 1, updateItem);
       state.cartList = [...state.cartList];
+      return { ...state };
+    }
+    case UPDATE_CART_ITEM_QUANTITY: {
+      const { id, quantity } = action.payload.cartItemUpdate;
+
+      const targetCartItemUpdateIndex = findIndexByKey(
+        "cart_item_id",
+        id,
+        state.cartList
+      );
+      state.cartList[targetCartItemUpdateIndex].quantity = quantity;
+
+      state.cartList = [...state.cartList];
+
       return { ...state };
     }
     case DELETE_ITEM: {
