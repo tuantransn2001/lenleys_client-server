@@ -12,20 +12,8 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER,
       },
-      product_id: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-      },
-      unit_price: {
-        allowNull: false,
-        type: Sequelize.STRING,
-      },
-      quantity: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-      },
       discount: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING,
       },
       createdAt: {
